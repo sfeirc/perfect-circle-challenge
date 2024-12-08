@@ -1,0 +1,152 @@
+:root {
+    --primary-color: #6C63FF;
+    --secondary-color: #2A2A2A;
+    --background-color: #000000;
+    --accent-color: #FF6B6B;
+    --text-color: #FFFFFF;
+    --card-bg: #1C1C1E;
+    --canvas-bg: #1C1C1E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 95%;
+    padding: 2rem;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.score-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.score {
+    background: var(--card-bg);
+    padding: 1.5rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(108, 99, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.score:hover {
+    transform: translateY(-2px);
+}
+
+.score-label {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.canvas-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    background: var(--canvas-bg);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+
+.instructions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.6);
+    opacity: 0.6;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#resetBtn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+#shareBtn {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(108, 99, 255, 0.3);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .score {
+        font-size: 1.5rem;
+    }
+} 
