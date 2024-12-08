@@ -30,7 +30,7 @@
 - 📤 Share functionality
 
 ## 🚀 Demo
-Try the live demo [![alt text](image.png)](#) *(replace with your deployed URL)*
+Try the live demo [![alt text](image.png)](#)
 
 ## 🛠️ Installation
 1. Clone the repository:
